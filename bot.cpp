@@ -104,7 +104,7 @@ int bot::evaluateMove(std::vector<std::vector<Player>>& board, int col, Player c
     if (canWin(board, col, opponent)) {
         score += 500;
     }
-    score = score + (50 * (3-std::abs(COLS-col)));
+    score = score + (50 * (3-std::abs(COLS/2 - col)));
 
     return score;
 }
